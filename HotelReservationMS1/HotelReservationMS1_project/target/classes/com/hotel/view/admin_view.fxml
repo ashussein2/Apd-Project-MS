@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.hotel.controller.AdminController"
+            prefWidth="800" prefHeight="500">
+
+    <center>
+        <VBox alignment="CENTER" spacing="18">
+            <padding>
+                <Insets top="40" bottom="40" left="40" right="40"/>
+            </padding>
+
+            <children>
+                <Label text="Admin Login"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+                <Label text="Sign in with your admin credentials"
+                       style="-fx-font-size: 13px; -fx-text-fill: #6b7280;"/>
+
+                <GridPane hgap="10" vgap="12" alignment="CENTER">
+                    <children>
+                        <Label text="Username:"
+                               GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="usernameField"
+                                   promptText="admin"
+                                   prefWidth="220"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Password:"
+                               GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <PasswordField fx:id="passwordField"
+                                       promptText="admin"
+                                       prefWidth="220"
+                                       GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+
+                <Label fx:id="messageLabel"
+                       style="-fx-font-size: 12px; -fx-text-fill: #b91c1c;"/>
+
+                <HBox alignment="CENTER" spacing="12">
+                    <children>
+                        <Button text="Login" onAction="#onLogin" prefWidth="90"/>
+                        <Button text="Cancel" onAction="#onCancel" prefWidth="90"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
